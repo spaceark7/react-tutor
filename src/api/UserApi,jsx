@@ -1,0 +1,10 @@
+const baseURL = 'http://user.kmotion.com:3001'
+
+const Api = axios.create({
+  baseURL,
+})
+
+const fetchUser = async () => {
+  const response = await Api.get('/users')
+  return response.data
+}
